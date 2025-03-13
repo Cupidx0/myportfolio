@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Set Cookie Example</title>
+</head>
+<body>
+    <h2>Learn About Cookies</h2>
+    <p>Cookies are small pieces of data stored on the user's computer by the web browser while browsing a website. They are used to remember information about the user, such as login status, preferences, and other session-related data. Here are some key concepts about cookies that a user should learn:</p>
+    <ul>
+        <li><strong>Setting a Cookie:</strong>
+            <ul>
+                <li>Cookies are set using the <code>document.cookie</code> property in JavaScript.</li>
+                <li>A cookie consists of a name-value pair, and optionally, attributes like expiration date, path, domain, and secure flag.</li>
+            </ul>
+        </li>
+        <li><strong>Expiration Date:</strong>
+            <ul>
+                <li>Cookies can have an expiration date, after which they are automatically deleted by the browser.</li>
+                <li>If no expiration date is set, the cookie is considered a session cookie and is deleted when the browser is closed.</li>
+            </ul>
+        </li>
+        <li><strong>Path Attribute:</strong>
+            <ul>
+                <li>The path attribute specifies the URL path that must exist in the requested URL for the browser to send the cookie header.</li>
+                <li>By default, the path is set to the current document location.</li>
+            </ul>
+        </li>
+        <li><strong>Reading a Cookie:</strong>
+            <ul>
+                <li>Cookies can be read using <code>document.cookie</code>, which returns all cookies in a single string.</li>
+                <li>Parsing this string is necessary to extract individual cookie values.</li>
+            </ul>
+        </li>
+        <li><strong>Deleting a Cookie:</strong>
+            <ul>
+                <li>To delete a cookie, set its expiration date to a past date.</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
