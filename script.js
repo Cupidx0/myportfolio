@@ -72,75 +72,55 @@ function ndate(){
     console.log(n);
 }
 ndate();
-window.onload = function(){
-    const canvas = document.getElementById("portId");
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let ncard = {
-        x: canvas.width/4,
-        y:canvas.height/4,
-        radius: 40,
-        dx:4,
-        dy:4,
-        color : "red"
-    };
-    function cardDrawing(){
-        ctx.beginPath();
-        ctx.arc(ncard.x, ncard.y, ncard.radius, 0, Math.PI * 2);
-        ctx.fillStyle = ncard.color;
-        ctx.fill();
-        ctx.closePath();
-    }
-    function update(){
-        ncard.x = ncard.dx;
-        ncard.y = ncard.dy;
-        if(ncard.x - ncard.radius <=0 || ncard.x + ncard.radius >= canvas.width){
-            ncard.dx *= -1;
-        }
-        if(ncard.y - ncard.radius <=0 || ncard.y + ncard.radius >= canvas.height){
-            ncard.dy *= -1;
-        }
 
-    }
-    function final(){
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        cardDrawing();
-        update();
-        requestAnimationFrame(final);
-    }
-    final();
-};
-function movings(){
-    const card = document.querySelector('#card');
-    let newX = 0, newY = 0;
-    let animationFrame;
-    if(card){
-        card.addEventListener("touchstart",(e)=>{
-            let touch = e.touches[0];
-            let startX = touch.clientX   - newX;
-            let startY = touch.clientY - newY;
-            function moveHandler(e){
-                let touchMove = e.touches[0];
-                newX = touchMove.clientX - startX;
-                newY = touchMove.clientY - startY;
-                if(!animationFrame){
-                    animationFrame = requestAnimationFrame(()=>{
-                        card.style.transform = `translate(${newX}px,${newY}px)`;
-                        card.style.position = 'absolute';
-                        animationFrame = null;
-                        console.log(card.style.transform);
-                    });
+function comingSoon(){
+    const coming = document.getElementById('coming');
+    const coming1 = document.getElementById('coming1');
+    const coming2 = document.getElementById('coming2');
+    coming.addEventListener("click",{
+        handleEvent: function(event) {
+            event.preventDefault();
+            const target = event.target.closest('a');
+            if (target) {
+                const href = target.getAttribute('href');
+                if (href) {
+                    coming.style.backgroundColor = "red";
+                    coming.style.color = "white";
+                    window.location.id = coming1;
+                    alert("This page is coming soon!");
                 }
             }
-            //implement movement functionality
-            function endHandler(){
-                document.removeEventListener("touchmove", moveHandler);
-                document.removeEventListener("touchend", endHandler);
+        }
+    });
+    coming1.addEventListener("click",{
+        handleEvent: function(event) {
+            event.preventDefault();
+            const target = event.target.closest('a');
+            if (target) {
+                const href = target.getAttribute('href');
+                if (href) {
+                    window.location.id = coming1;
+                    coming1.style.backgroundColor = "red";
+                    coming1.style.color = "white";
+                    alert("This page is coming soon!");
+                }
             }
-            document.removeEventListener("touchmove", moveHandler);
-            document.removeEventListener("touchend", endHandler);
-        });
-    }
+        }
+    });
+    coming2.addEventListener("click",{
+        handleEvent: function(event) {
+            event.preventDefault();
+            const target = event.target.closest('a');
+            if (target) {
+                const href = target.getAttribute('href');
+                if (href) {
+                    window.location.id = coming1;
+                    coming2.style.backgroundColor = "red";
+                    coming2.style.color = "white";
+                    alert("This page is coming soon!");
+                }
+            }
+        }
+    });
 }
-movings();
+comingSoon();

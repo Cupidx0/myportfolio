@@ -28,6 +28,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#project">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -35,8 +36,22 @@
     </div>
     <div id="about">
         <h1>About Me</h1>
-        <h2>Hey there, I'm Godwin. <br>I'm diving into the world of programming, learning the ropes one line of code at a time. Off-screen,<br> you'll find me on the basketball court or immersed in the latest game release. Let's keep it real<br> and have some fun exploring the digital and analog worlds alike!<br>i 
-            would have said but wouldnt want to bore you will that but here are my <a href="#project" style="color: #3e57bc;">projects</a></h2>
+        <div class="about-content">
+            <h2>Hello, I'm <span class="highlight">Godwin</span></h2>
+            <p class="intro">A passionate front-end developer with a drive for creating engaging digital experiences. I combine technical skills with creative problem-solving to build responsive, user-friendly websites.</p>
+            
+            <p class="skills-summary">With a foundation in <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>, I'm constantly expanding my expertise through hands-on projects and continuous learning.</p>
+            
+            <p class="personal">When I'm not coding, you'll find me on the basketball court or exploring the latest game releases — experiences that enhance my creativity and keep me thinking outside the box.</p>
+            
+            <p class="career-goal">I'm currently pursuing my T-LEVELS in Digital Design and Development, seeking opportunities to apply my skills in collaborative environments where I can contribute to innovative web solutions.</p>
+            
+            <div class="cta-buttons">
+                <a href="#project" class="cta-button">View My Projects</a>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+                <a href="" class="cta-button">my cv</a>
+            </div>
+        </div>
     </div>
     <div class="block" id="part1">
         <div class="block" id="skills">
@@ -60,21 +75,71 @@
             </ul>
         </div>
     </div>
+    <div class="block" id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>internship <span class="company">- Patch-Evergreen</span></h3>
+                <p class="duration">september 2024 - january 2025</p>
+            </div>
+            <ul class="responsibilities">
+                <li>Developed and maintained responsive websites using HTML, CSS,JavaScript,moustache and tailwind.css</li>
+                <li>Collaborated with design team to implement UI/UX improvements</li>
+                <li>Optimized website performance through code refactoring and best practices</li>
+                <li>Assisted in troubleshooting and resolving website functionality issues</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>internship <span class="company">- Springboard Media</span></h3>
+                <p class="duration">feburary 2024 - june 2024</p>
+            </div>
+            <ul class="responsibilities">
+                <li>Developed and maintained responsive in the front-end aspect of the websites using HTML, CSS and JavaScript</li>
+                <li>Collaborated with design team to implement UI/UX improvements</li>
+                <li>Optimized website performance through code refactoring and best practices</li>
+                <li>Assisted in troubleshooting and resolving website functionality issues</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <h3>Freelance developer <span class="company">Self employed</span></h3>
+                <p class="duration">June 2022 - till date</p>
+            </div>
+            <ul class="responsibilities">
+                <li>Created and edited web content using content management systems</li>
+                <li>Participated in team meetings and contributed ideas for project improvements</li>
+                <li>Gained hands-on experience with front-end development tools and workflows</li>
+            </ul>
+        </div>
+    </div>
     <div class="block" id="project">
         <h2>Projects</h2>
         <ul>
-            <li>Project 1</li>
             <li>
-                <a href="https://cupidx0.github.io" target="_blank">
-                </a>
+                <h3>Portfolio Website</h3>
+                <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript.</p>
+                <a href="https://cupidx0.github.io" target="_blank" rel="noopener">View Project</a>
             </li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-            <li>Project 4</li>
+            <li>
+                <h3>To-Do App</h3>
+                <p>A simple task management application created with JavaScript.</p>
+                <a href="#" target="_blank" rel="noopener" id="coming">Coming Soon</a>
+            </li>
+            <li>
+                <h3>Weather Dashboard</h3>
+                <p>A web application that shows weather information using a third-party API.</p>
+                <a href="#" target="_blank" rel="noopener" id="coming1">Coming Soon</a>
+            </li>
+            <li>
+                <h3>Game Project</h3>
+                <p>An interactive browser game developed using JavaScript.</p>
+                <a href="#" target="_blank" rel="noopener" id="coming2">Coming Soon</a>
+            </li>
         </ul>
     </div>
     <footer>
-        <div id="contact" class="block">
+        <div id="contact">
             <h2>Contact</h2>
             <ul>
                 <li><a href="https://www.instagram.com/cupid_x0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><span style="color: #ffdb8b,#ee653d,#d42e81,#a237b6,#3e57bc; transform:translateY(-10px);"><i class="fa-brands fa-instagram fa-xl"></span></i>instagram</a></li>
@@ -83,8 +148,8 @@
                 <li><a href = "mailto: alamugodwin@gmail.com"><i class="fa-regular fa-envelope fa-shake fa-xl"></i>mail</a></li>
             </ul>
         </div>
-        <label class="switch">
-            <input type="checkbox" style="color: blueviolet;" onclick="myFunction()">
+        <label class="switch" for="themeToggle">
+            <input type="checkbox" style="color: blueviolet;" onclick="myFunction()" id="themeToggle" aria-label="Toggle dark mode">
             <span class="slider round"></span>
         </label>
         <div id="cookies" onclick="handleCookieConsent()">
