@@ -16,8 +16,8 @@ body{
 /* Media Queries */
 @media screen and (max-width: 600px) {
     body {
-        background-color: #9b9a9a;
-        color: #000;
+        background-color: #e0f7fa; /* Light cyan */
+        color: #004d40; /* Dark teal */
         padding: 2%;
     }
 
@@ -46,9 +46,12 @@ body{
         margin: 5px 0;
     }
 
-    #skills, #education, #project, #contact {
+    #skills, #education, #project, #contact, #experience {
         flex-direction: column;
         padding: 15%;
+        :hover{
+            color: white;
+        }
     }
     .logo{
         font-size: 1.5em;
@@ -67,6 +70,9 @@ body{
         flex-direction: column;
         gap: 15px;
         padding: 0;
+        :hover{
+            color: white;
+        }
     }
     
     #project ul li {
